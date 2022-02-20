@@ -71,6 +71,7 @@ export class AppRealStorage extends AppMetadataStorage {
 		return new Promise<string>((resolve, reject) => {
 			try {
 				this.db.update({ id: item.id }, item);
+				console.log(this.db);
 				resolve(item.id);
 			} catch (e) {
 				return reject(e);
